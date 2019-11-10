@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>io.github.art.idea</id>
+    <name>ART</name>
+    <vendor email="daniil.a.titov@gmail.com" url="https://github.com/art-community">art-community</vendor>
+
+    <description><![CDATA[
+    Art plugin
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij"/>
+
+    <actions>
+        <group id="io.art.idea.plugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <action id="io.art.idea.plugin.SampleMenu.action" class="io.art.idea.plugin.Test"
+                    text="Generate">
+                <add-to-group group-id="NewGroup" anchor="first"/>
+            </action>
+
+        </group>
+    </actions>
+</idea-plugin>
