@@ -16,12 +16,20 @@ repositories {
 
 dependencies {
     embedded("io.github.sharelison:jsontojava:1.0.1")
-    testImplementation(kotlin("test"))
-    testImplementation(kotlin("test-junit"))
+}
+
+art {
+    idea()
+    tests()
+    embeddedModules {
+        kit()
+        applicationGenerator()
+    }
 }
 
 intellij {
     version = "2019.1"
+    updateSinceUntilBuild = false
 }
 
 tasks.withType(Wrapper::class.java) {
