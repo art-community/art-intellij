@@ -18,7 +18,7 @@ class Test : AnAction() {
 
         packageNameLabel.horizontalAlignment = CENTER
 
-        val panel = panel() {
+        val panel = panel {
             row {
                 packageNameLabel(growX)
             }

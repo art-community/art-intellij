@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     `maven-publish`
     id("org.jetbrains.intellij") version "0.4.12"
-    id("io.github.art.project") version "1.0.96"
+    id("io.github.art.project") version "1.0.113"
 }
 
 group = "io.github.art"
