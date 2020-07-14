@@ -1,30 +1,18 @@
-package io.art.idea.plugin
+package io.art.idea.plugin.completion
 
-import com.intellij.codeInsight.TailType
-import com.intellij.codeInsight.TailType.*
 import com.intellij.codeInsight.completion.CompletionContributor
 import com.intellij.codeInsight.completion.CompletionParameters
 import com.intellij.codeInsight.completion.CompletionProvider
 import com.intellij.codeInsight.completion.CompletionResultSet
 import com.intellij.codeInsight.completion.CompletionType.BASIC
-import com.intellij.codeInsight.lookup.LookupElementBuilder
 import com.intellij.codeInsight.lookup.LookupElementBuilder.create
-import com.intellij.codeInsight.lookup.LookupElementBuilder.createWithIcon
-import com.intellij.icons.AllIcons
 import com.intellij.icons.AllIcons.Nodes.Field
 import com.intellij.lang.java.JavaLanguage
 import com.intellij.patterns.PlatformPatterns.psiElement
 import com.intellij.psi.JavaPsiFacade.getInstance
-import com.intellij.psi.PsiAnnotation
-import com.intellij.psi.PsiAnnotation.DEFAULT_REFERENCED_METHOD_NAME
-import com.intellij.psi.PsiAnnotationParameterList
 import com.intellij.psi.PsiIdentifier
-import com.intellij.psi.PsiNamedElement
-import com.intellij.psi.impl.PsiImplUtil
 import com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl
 import com.intellij.psi.search.GlobalSearchScope.allScope
-import com.intellij.psi.util.PsiTreeUtil
-import com.intellij.psi.util.PsiTreeUtil.findElementOfClassAtOffset
 import com.intellij.util.ProcessingContext
 
 class ModelCompletion : CompletionContributor() {

@@ -1,1 +1,1 @@
-rootProject.name = "art-intellij-idea-plugin"
+rootProject.name = "art-intellij"

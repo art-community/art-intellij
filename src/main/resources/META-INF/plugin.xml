@@ -1,23 +1,15 @@
 <idea-plugin>
     <id>io.github.art.idea</id>
     <name>ART</name>
-    <vendor email="daniil.a.titov@gmail.com" url="https://github.com/art-community">art-community</vendor>
+    <vendor email="anton.sh.local@gmail.com" url="https://github.com/art-community">art-community</vendor>
 
-    <description><![CDATA[
-    Art plugin
-    ]]></description>
+    <description>
+        ART Plugin. ART Generated code completions and other.
+    </description>
 
     <extensions defaultExtensionNs="com.intellij">
-        <completion.contributor language="JAVA" implementationClass="io.art.idea.plugin.ModelCompletion"/>
+        <completion.contributor language="JAVA" implementationClass="io.art.idea.plugin.completion.ModelCompletion"/>
+        <lang.psiAugmentProvider implementation="io.art.idea.plugin.augment.GeneratedAugmentProvider"/>
     </extensions>
 
-    <actions>
-        <group id="io.art.idea.plugin.SampleMenu" text="Greeting" description="Greeting menu">
-            <action id="io.art.idea.plugin.SampleMenu.action" class="io.art.idea.plugin.Test"
-                    text="Generate">
-                <add-to-group group-id="NewGroup" anchor="first"/>
-            </action>
-
-        </group>
-    </actions>
 </idea-plugin>
